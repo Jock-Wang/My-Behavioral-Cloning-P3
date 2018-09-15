@@ -18,13 +18,10 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/placeholder.png "Model Visualization"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
+[image1]: ./examples/image1.png
+[image2]: ./examples/center_2016_12_01_13_30_48_287.jpg
+[image3]: ./examples/left_2016_12_01_13_30_48_287.jpg
+[image4]: ./examples/right_2016_12_01_13_30_48_287.jpg
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -132,7 +129,6 @@ I then recorded the vehicle recovering from the left side and right sides of the
 
 ![alt text][image3]
 ![alt text][image4]
-![alt text][image5]
 
 Then I repeated this process on track two in order to get more data points.
 
@@ -142,8 +138,6 @@ After the collection process, I had 24268 number of data points. I then preproce
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 20 as evidenced by model's accuracy trend. The optimal epoch number is when the model stops learning for better accuracy.
 
-![alt text][image6]
-![alt text][image7]
 
 
 After the collection process, I had 24268 number of data points. I then preprocessed this data by cropping out useless part of the image: the sky. Since the vehicle only cares about the track to determines how to behave, I cropped out the top part of the image which doesn't have any useful information to speed up the process and save resources. Then to polish the data, I added a layer of normalization in the preprocess
